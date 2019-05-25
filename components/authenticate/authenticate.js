@@ -2,7 +2,7 @@ import { prepare, render } from 'elementree'
 
 function authenticate (apiInfo) {
   return render`
-    <p>Authenticated</p>
+    <p>Not Authenticated</p>
   `
 }
 

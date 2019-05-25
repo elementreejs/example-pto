@@ -19,7 +19,7 @@
   "homepage": "https://github.com/mjstahl/elementree-pto#readme",
   "dependencies": {
     "components": "^0.1.0",
-    "elementree": "^0.18.1",
+    "elementree": "^0.18.3",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "steal": "^2.2.1",
