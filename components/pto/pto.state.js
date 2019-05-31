@@ -1,6 +1,6 @@
 import APIInfo from '../../models/api-info'
 
-export default class PTOModel {
+export default class PTOState {
   constructor () {
     this.apiInfo = new APIInfo()
   }

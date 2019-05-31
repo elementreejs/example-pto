@@ -21,7 +21,10 @@ export default class APIInfo {
   }
 
   set token (token) {
-    if (!token) window.localStorage.removeItem(STORAGE_PROP)
-    window.localStorage.setItem(STORAGE_PROP, token)
+    if (!token) {
+      window.localStorage.removeItem(STORAGE_PROP)
+    } else {
+      window.localStorage.setItem(STORAGE_PROP, token)
+    }
   }
 }

@@ -11,8 +11,7 @@ function authenticate (state, apiInfo) {
           <label for="token" class="${!state.validToken && 'invalid-token'}">
             ${state.validToken
                 ? 'Freshbooks API Token'
-                : html`<i class="fas fa-exclamation-triangle"></i>Double-check your API Token`
-            }
+                : html`<i class="fas fa-exclamation-triangle"></i>Double-check your API Token`}
           </label>
           <input type="text" id="token" value="${apiInfo.token}" />
           <button onclick="${authenticate}">
