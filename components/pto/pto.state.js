@@ -6,6 +6,6 @@ export default class PTOModel {
   }
 
   get isAuthenticated () {
-    return this.apiInfo.isAuthenticated
+    return this.apiInfo.isValid
   }
 }

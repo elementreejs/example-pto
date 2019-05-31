@@ -6,9 +6,7 @@ import state from './pto.state'
 function pto (state) {
   return render`
     <body>
-      ${state.isAuthenticated
-        ? 'Authenticated'
-        : authenticate(state.apiInfo)}
+      ${state.isAuthenticated ? 'Authenticated' : authenticate(state.apiInfo)}
     </body>
   `
 }
