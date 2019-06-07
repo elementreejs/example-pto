@@ -1,6 +1,7 @@
 import { prepare, render } from 'elementree'
 
 import state from './dashboard.state'
+import './dashboard.less';
 
 function dashboard (state, apiInfo) {
   const dataIsAvailable = !!state.remainingHours

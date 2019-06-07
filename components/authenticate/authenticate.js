@@ -1,6 +1,7 @@
 import { html, prepare, render } from 'elementree'
 
 import APIToken from '../../models/api-info';
+import './authenticate.less'
 
 function authenticate (state, apiInfo) {
   return render`
