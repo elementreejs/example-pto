@@ -1,18 +1,20 @@
 import { html, prepare, render } from 'elementree'
 
-import APIToken from '../../models/api-info';
+import APIToken from '../../models/api-info'
 import './authenticate.less'
 
 function authenticate (state, apiInfo) {
+  const message = state.validToken
+    ? 'Freshbooks API Token'
+    : html`<i class="fas fa-exclamation-triangle"></i>Double-check your API Token`
+
   return render`
     <div class="authenticate">
       <h1>Bitovi PTO Available</h1>
       <div class="first-step form-wrapper">
         <form>
           <label for="token" class="${!state.validToken && 'invalid-token'}">
-            ${state.validToken
-                ? 'Freshbooks API Token'
-                : html`<i class="fas fa-exclamation-triangle"></i>Double-check your API Token`}
+            ${message}
           </label>
           <input type="text" id="token" value="${apiInfo.token}" />
           <button onclick="${authenticate}">
@@ -28,7 +30,7 @@ function authenticate (state, apiInfo) {
     </div>
   `
 
-  function authenticate(ev) {
+  function authenticate (ev) {
     ev.preventDefault()
 
     const token = document.querySelector('input#token').value
